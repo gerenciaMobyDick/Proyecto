@@ -1,0 +1,13 @@
+E:\2°Entrega\App\WindowsFormsApp2\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe.config
+E:\2°Entrega\App\WindowsFormsApp2\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe
+E:\2°Entrega\App\WindowsFormsApp2\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.pdb
+E:\2°Entrega\App\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\Deporte2.0.csprojAssemblyReference.cache
+E:\2°Entrega\App\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.PerfilEvento.resources
+E:\2°Entrega\App\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Form1.resources
+E:\2°Entrega\App\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.PerfilDeporte.resources
+E:\2°Entrega\App\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Properties.Resources.resources
+E:\2°Entrega\App\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\Deporte2.0.csproj.GenerateResource.cache
+E:\2°Entrega\App\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\Deporte2.0.csproj.CoreCompileInputs.cache
+E:\2°Entrega\App\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
+E:\2°Entrega\App\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
+E:\2°Entrega\App\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\Deporte2.0.csproj.CopyComplete
