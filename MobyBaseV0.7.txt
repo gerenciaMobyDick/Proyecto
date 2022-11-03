@@ -1,0 +1,160 @@
+﻿create database MobyDick;
+
+use MobyDick;
+
+create table Admin(IdUser int not null auto_increment primary key,
+					CodigoAdminActual varchar (20));
+
+create table Competencia(IdComp int not null auto_increment primary key,
+						Ubicacion varchar(20),
+					    Fecha_hora DateTime,
+						IdEvento int);
+                        
+create table Deportista (IdDeportista int not null auto_increment primary key,
+						Peso int,
+                        Edad int,
+                        Nom varchar(30),
+                        Apellido varchar(30),
+                        Altura int,
+                        AñosEntr int);
+                        
+create table Equipo (IdEq int not null auto_increment primary key,
+					NomEquipo varchar(30),
+					Pais varchar(20),
+                    Region varchar(20),
+                    IdSub int,
+                    Equipo varchar(20));
+                    
+create table Evento (IdEvento int not null auto_increment primary key,
+					NomEvento varchar(20));
+
+create table Flotante (IdPoint int not null auto_increment primary key,
+					PointFloat int,
+                    TypeUnit int);
+                    
+create table Globall (IdEvento int not null auto_increment primary key,
+					NomEvento varchar(20));
+
+create table Intt (IdPoint int not null auto_increment primary key,
+				   Pointint int);
+                   
+create table Nacional (IdEvento int not null auto_increment primary key,
+					   NomEvento varchar(20),
+					   Pais varchar(20));
+                       
+create table Platinum (IdUser int not null auto_increment primary key,
+						FechaV date);
+                        
+create table Puntuacion (IdPoint int not null auto_increment primary key);
+
+create table Regional (IdEvento int not null auto_increment primary key,
+					   NomEvento varchar(20),
+						Region varchar (30));
+				
+create table Timee (IdPoint int not null auto_increment primary key,
+					PointTimer int);
+                    
+create table Usuario (IdUser int not null auto_increment primary key,
+					email varchar(30),
+                    Username varchar(30),
+                    Pwd varchar(30),
+                    Edad int);
+                    
+create table SubDeporte (IdSub int not null auto_increment primary key,
+					   CantPart int,
+                       SubNom varchar(20),
+                       DepNom varchar(20),
+                       TypePoint varchar(20));
+                       
+create table ParticipaI (IdEvento int primary key,
+						IdEq int );
+
+create table ParticipaII (IdEq int primary key,
+						 IdComp int,
+                         IdPoint int,
+                         Duracion int);
+                         
+create table ParticipaIII (IdComp int primary key,
+							IdDeportista int,
+                            CantidadParticipacion int);
+/*_____________________________________________________________________________________*/
+
+create table Pertenece (IdDeportista int primary key,
+						IdEq int,
+                        tiempo int);
+				
+create table SuscribeI (IdUser int primary key,
+						IdSub int,
+                        PermisoAvisos boolean);
+
+create table SuscribeII (IdUser int primary key,
+						IdEvento int,
+                        PermisoAvisos boolean);
+                        
+create table SuscribeIII (IdUser int primary key,
+                        IdEq int,
+                        PermisoAvisos boolean);
+                        
+create table Posicion_tablas (Posicion int primary key,
+								IdEvento int,
+                                IdEq int
+                                );
+
+alter table Competencia add constraint FK_IdEvento foreign key (IdEvento) references Evento(IdEvento);
+
+alter table Equipo add constraint FK_IdSub foreign key (IdSub) references SubDeporte(IdSub);
+
+alter table Flotante add constraint FK_IdPointI foreign key (IdPoint) references Puntuacion(IdPoint);
+
+alter table Globall add constraint FK_IdEventoI foreign key (IdEvento) references Evento(IdEvento);
+
+alter table Intt add constraint FK_IdPointII foreign key (IdPoint) references Puntuacion(IdPoint);
+
+alter table Nacional add constraint FK_IdEventoII foreign key (IdEvento) references Evento(IdEvento);
+
+alter table ParticipaI add constraint FK_IdEventoIII foreign key (IdEvento) references Evento(IdEvento);
+
+alter table ParticipaI add constraint FK_IdEqIII foreign key (IdEq) references Equipo(IdEq);
+
+alter table ParticipaII add constraint FK_IdEqIV foreign key (IdEq) references Equipo(IdEq);
+
+alter table ParticipaII add constraint FK_IdCompII foreign key (IdComp) references Competencia(IdComp);
+
+alter table ParticipaII add constraint Fk_IdPointX foreign key (IdPoint) references Puntuacion(IdPoint);
+
+alter table ParticipaIII add constraint FK_IdDeportista foreign key (IdDeportista) references Deportista(IdDeportista);
+
+alter table ParticipaIII add constraint FK_IdCompIII foreign key (IdComp) references Competencia(IdComp);
+
+alter table Pertenece add constraint FK_IdEqV foreign key (IdEq) references Equipo(IdEq);
+
+alter table Pertenece add constraint FK_IdDeportistaI foreign key (IdDeportista) references Deportista(IdDeportista);
+
+alter table Platinum add constraint FK_IdUser foreign key (IdUser) references Usuario(IdUser);
+
+alter table Posicion_tablas add constraint FK_IdEventoIV foreign key (IdEvento) references Evento(IdEvento);
+
+alter table Posicion_tablas add constraint FK_IdEqVI foreign key (IdEq) references Equipo(IdEq);
+
+alter table Regional add constraint FK_IdEventoV foreign key (IdEvento) references Evento(IdEvento);
+
+alter table SuscribeI add constraint FK_IdSubII foreign key (IdSub) references SubDeporte(IdSub);
+
+alter table SuscribeI add constraint FK_IdUserI foreign key (IdUser) references Usuario(IdUser);
+
+alter table SuscribeII add constraint FK_IdEventoVI foreign key (IdEvento) references Evento(IdEvento);
+
+alter table SuscribeI add constraint FK_IdUserII foreign key (IdUser) references Usuario(IdUser);
+
+alter table SuscribeIII add constraint FK_IdEqVII foreign key (IdEq) references Equipo(IdEq);
+
+alter table SuscribeI add constraint FK_IdUserIII foreign key (IdUser) references Usuario(IdUser);
+
+/*__________________________________________________________________________________________*/
+Select * from SubDeporte;
+
+SELECT NomEquipo, Puntuacion.*, Fecha_hora, Ubicacion, Competencia.IdComp FROM Competencia
+JOIN ParticipaII ON Competencia.IdComp = ParticipaII.IdComp 
+Join Equipo on ParticipaII.IdEq = Equipo.IdEq 
+Join Puntuacion on ParticipaII.IdPoint = Puntuacion.IdPoint 
+and Competencia.IdEvento = 5;

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1525
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Deporte2.2", "Deporte2.2\Deporte2.2.csproj", "{61F0E6C3-4130-4D17-A3B9-1EDB85E7F1ED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{61F0E6C3-4130-4D17-A3B9-1EDB85E7F1ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61F0E6C3-4130-4D17-A3B9-1EDB85E7F1ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61F0E6C3-4130-4D17-A3B9-1EDB85E7F1ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61F0E6C3-4130-4D17-A3B9-1EDB85E7F1ED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C67BB284-A474-4C2A-849E-10DC9EB05832}
+	EndGlobalSection
+EndGlobal
